@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="كروت شاشة متوفرة لدى NITRIX في كربلاء مع توصيل إلى جميع محافظات العراق" />
+  <title>NITRIX | Graphics Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">توصيل إلى جميع محافظات العراق — اطلب مباشرة عبر واتساب</div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Nitrix home"><img src="assets/nitrix-logo-full.png" alt="NITRIX PC Store" /></a>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a>
+        <a class="active" href="graphics-cards.html" data-i18n="navComponents">القطع</a>
+        <a href="index.html#products" data-i18n="navProducts">المنتجات</a>
+        <a href="index.html#deals" data-i18n="navDeals">العروض</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="container catalog-hero-inner">
+        <div>
+          <span class="eyebrow" data-i18n="eyebrow">قطع الكمبيوتر</span>
+          <h1 data-i18n="title">كروت الشاشة</h1>
+          <p data-i18n="intro">اختَر كرت الشاشة المناسب، وشاهد السعر بشكل مباشر. جميع المنتجات المعروضة متوفرة بضمان 3 سنوات وتوصيل إلى كل محافظات العراق.</p>
+        </div>
+        <div class="catalog-stat"><strong id="productTotal">5</strong><span data-i18n="available">منتجات متوفرة</span></div>
+      </div>
+    </section>
+
+    <section class="section-pad compact">
+      <div class="container catalog-layout">
+        <aside class="filters-panel">
+          <div class="filter-heading"><h2 data-i18n="filters">الفلاتر</h2><button id="resetFilters" type="button" data-i18n="reset">إعادة ضبط</button></div>
+          <label class="filter-label" for="catalogSearch" data-i18n="searchLabel">بحث</label>
+          <input class="filter-input" id="catalogSearch" type="search" placeholder="اسم المنتج..." data-i18n-placeholder="searchPlaceholder">
+
+          <div class="filter-group">
+            <span class="filter-label" data-i18n="brand">الشركة</span>
+            <label><input type="checkbox" name="brand" value="ASUS"> ASUS</label>
+            <label><input type="checkbox" name="brand" value="GALAX"> GALAX</label>
+            <label><input type="checkbox" name="brand" value="GIGABYTE"> GIGABYTE</label>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label" data-i18n="memory">الذاكرة</span>
+            <label><input type="checkbox" name="memory" value="8"> 8GB</label>
+            <label><input type="checkbox" name="memory" value="12"> 12GB</label>
+            <label><input type="checkbox" name="memory" value="16"> 16GB</label>
+          </div>
+        </aside>
+
+        <div class="catalog-content">
+          <div class="catalog-toolbar">
+            <p><span id="resultCount">5</span> <span data-i18n="results">منتجات</span></p>
+            <select id="sortSelect" aria-label="ترتيب المنتجات">
+              <option value="featured" data-i18n="sortFeatured">الترتيب المقترح</option>
+              <option value="low" data-i18n="sortLow">السعر: من الأقل</option>
+              <option value="high" data-i18n="sortHigh">السعر: من الأعلى</option>
+            </select>
+          </div>
+          <div class="product-grid catalog-grid" id="catalogGrid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/nitrix-logo-full.png" alt="NITRIX" /><p data-i18n="footerText">متجر NITRIX في كربلاء، مع توصيل إلى جميع محافظات العراق.</p></div>
+      <div><h3 data-i18n="footerShop">المتجر</h3><a href="graphics-cards.html" data-i18n="graphics">كروت الشاشة</a><a href="index.html#products" data-i18n="products">المنتجات</a></div>
+      <div><h3 data-i18n="footerSupport">الدعم</h3><a href="pc-builder.html" data-i18n="builder">PC Builder</a><a href="https://wa.me/9647766009666" target="_blank" data-i18n="contact">اتصل بنا</a></div>
+      <div><h3 data-i18n="footerContact">التواصل</h3><p data-i18n="location">كربلاء، العراق</p><a href="tel:+9647766009666">0776 600 9666</a><a href="mailto:nitrixpc3@gmail.com">nitrixpc3@gmail.com</a><a href="https://wa.me/9647766009666" target="_blank">WhatsApp</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NITRIX PC Store</span><span data-i18n="delivery">توصيل إلى جميع محافظات العراق</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="products.js"></script>
+  <script src="catalog.js"></script>
+</body>
+</html>

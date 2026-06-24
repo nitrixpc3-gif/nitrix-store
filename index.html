@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="NITRIX PC Store — تجميعات وقطع كمبيوتر في كربلاء مع توصيل إلى جميع محافظات العراق" />
+  <title>NITRIX | PC Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">توصيل إلى جميع محافظات العراق — اطلب مباشرة عبر واتساب</div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="Nitrix home">
+        <img src="assets/nitrix-logo-full.png" alt="NITRIX PC Store" />
+      </a>
+
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#home" data-i18n="navHome">الرئيسية</a>
+        <a href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a>
+        <a href="graphics-cards.html" data-i18n="navComponents">القطع</a>
+        <a href="#products" data-i18n="navPrebuilt">تجميعات جاهزة</a>
+        <a href="#deals" data-i18n="navDeals">العروض</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <button class="icon-btn" aria-label="المفضلة">♡</button>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+
+    <div class="container search-row">
+      <form class="search-box" id="searchForm">
+        <input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="ابحث عن منتج أو فئة..." />
+        <button type="submit" aria-label="بحث">⌕</button>
+      </form>
+      <a class="whatsapp-mini" href="https://wa.me/9647766009666" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-pad">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="heroEyebrow">ابنِ جهازك بدون حدود</span>
+          <h1 data-i18n="heroTitle">أداء قوي.<br><span>اختيار أذكى.</span></h1>
+          <p data-i18n="heroText">قطع مختارة بعناية وتجميعات تناسب استخدامك وميزانيتك، بدعم مباشر من Nitrix في كربلاء وتوصيل إلى جميع محافظات العراق.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pc-builder.html" data-i18n="buildBtn">ابدأ تجميعتك</a>
+            <a class="btn btn-outline" href="#categories" data-i18n="shopBtn">تصفح القطع</a>
+          </div>
+          <div class="trust-row">
+            <div><strong>✓</strong><span data-i18n="trustQuality">منتجات موثوقة</span></div>
+            <div><strong>⚙</strong><span data-i18n="trustSupport">مساعدة بالاختيار</span></div>
+            <div><strong>⌁</strong><span data-i18n="trustDelivery">توصيل داخل العراق</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Gaming PC illustration">
+          <div class="pc-scene">
+            <div class="monitor">
+              <img src="assets/nitrix-logo-icon.png" alt="Nitrix" />
+              <div class="monitor-stand"></div>
+            </div>
+            <div class="pc-case">
+              <div class="fan fan-one"></div>
+              <div class="fan fan-two"></div>
+              <div class="fan fan-three"></div>
+              <span class="case-line"></span>
+            </div>
+            <div class="desk-line"></div>
+          </div>
+          <div class="floating-chip chip-one">GPU</div>
+          <div class="floating-chip chip-two">CPU</div>
+          <div class="floating-chip chip-three">DDR5</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section-pad compact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow" data-i18n="categoriesEyebrow">الأقسام الرئيسية</span>
+            <h2 data-i18n="categoriesTitle">كل شيء لبناء جهازك</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a href="#products" class="category-card"><span class="cat-icon">▰</span><h3 data-i18n="catPrebuilt">تجميعات جاهزة</h3><p data-i18n="catPrebuiltText">جاهزة للعمل واللعب</p></a>
+          <a href="graphics-cards.html" class="category-card"><span class="cat-icon">⬡</span><h3 data-i18n="catComponents">قطع الكمبيوتر</h3><p data-i18n="catComponentsText">معالجات وكروت وباقي القطع</p></a>
+          <a href="#products" class="category-card"><span class="cat-icon">▱</span><h3 data-i18n="catLaptops">لابتوبات</h3><p data-i18n="catLaptopsText">للعمل والدراسة والألعاب</p></a>
+          <a href="#products" class="category-card"><span class="cat-icon">▭</span><h3 data-i18n="catMonitors">شاشات</h3><p data-i18n="catMonitorsText">وضوح وسلاسة أعلى</p></a>
+          <a href="#products" class="category-card"><span class="cat-icon">⌁</span><h3 data-i18n="catAccessories">إكسسوارات</h3><p data-i18n="catAccessoriesText">كمّل إعدادك بالكامل</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section-pad compact products-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow" data-i18n="featuredEyebrow">مختارات Nitrix</span><h2 data-i18n="featuredTitle">منتجات مميزة</h2></div>
+          <button class="text-link" id="showAllBtn" data-i18n="viewAll">عرض الكل ←</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section id="builder" class="section-pad compact">
+      <div class="container builder-card">
+        <div class="builder-copy">
+          <span class="eyebrow" data-i18n="builderEyebrow">جهازك بطريقتك</span>
+          <h2 data-i18n="builderTitle">NITRIX PC BUILDER</h2>
+          <p data-i18n="builderText">اختَر القطع خطوة بخطوة، احسب السعر، وتأكد من التوافق الأساسي قبل إرسال التجميعة إلى واتساب.</p>
+          <div class="builder-points">
+            <span data-i18n="builderPoint1">✓ توافق المعالج والمذربورد</span>
+            <span data-i18n="builderPoint2">✓ تقدير استهلاك الطاقة</span>
+            <span data-i18n="builderPoint3">✓ مشاركة التجميعة مباشرة</span>
+          </div>
+          <a class="btn btn-primary" href="pc-builder.html" data-i18n="startBuilding">ابدأ الآن</a>
+        </div>
+        <div class="builder-ui" aria-hidden="true">
+          <div class="builder-top"><i></i><i></i><i></i></div>
+          <div class="builder-layout">
+            <div class="builder-sidebar"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="builder-main">
+              <div class="ui-card wide"></div>
+              <div class="ui-row"><div class="ui-card"></div><div class="ui-card"></div></div>
+              <div class="ui-row"><div class="ui-card"></div><div class="ui-card price"><b>1,850,000</b><small>IQD</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="deals" class="section-pad compact">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow" data-i18n="dealsEyebrow">عروض البداية</span><h2 data-i18n="dealsTitle">وفر على إعدادك</h2></div>
+        </div>
+        <div class="deals-grid">
+          <article class="deal-card"><span>-10%</span><div><h3 data-i18n="deal1">كومبو كيبورد وماوس</h3><p data-i18n="dealLimited">لفترة محدودة</p></div><strong>75,000 IQD</strong></article>
+          <article class="deal-card"><span>-8%</span><div><h3 data-i18n="deal2">SSD NVMe 1TB</h3><p data-i18n="dealLimited">لفترة محدودة</p></div><strong>92,000 IQD</strong></article>
+          <article class="deal-card"><span>-12%</span><div><h3 data-i18n="deal3">مزود طاقة 750W</h3><p data-i18n="dealLimited">لفترة محدودة</p></div><strong>115,000 IQD</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-strip">
+      <div class="container brands-row" aria-label="Brands">
+        <span>ASUS</span><span>MSI</span><span>GIGABYTE</span><span>INTEL</span><span>AMD</span><span>NVIDIA</span><span>CORSAIR</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/nitrix-logo-full.png" alt="NITRIX" />
+        <p data-i18n="footerText">وجهتك لقطع الكمبيوتر والتجميعات المختارة بعناية، من كربلاء إلى جميع محافظات العراق.</p>
+      </div>
+      <div><h3 data-i18n="footerShop">المتجر</h3><a href="#products" data-i18n="navPrebuilt">تجميعات جاهزة</a><a href="graphics-cards.html" data-i18n="navComponents">القطع</a><a href="#deals" data-i18n="navDeals">العروض</a></div>
+      <div><h3 data-i18n="footerSupport">الدعم</h3><a href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a><a href="https://wa.me/9647766009666" target="_blank" data-i18n="contactUs">اتصل بنا</a><a href="#" data-i18n="warranty">الضمان والاستبدال</a></div>
+      <div><h3 data-i18n="footerContact">التواصل</h3><p>كربلاء، العراق</p><a href="tel:+9647766009666">0776 600 9666</a><a href="mailto:nitrixpc3@gmail.com">nitrixpc3@gmail.com</a><a href="https://wa.me/9647766009666" target="_blank">WhatsApp</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NITRIX PC Store</span><span data-i18n="prototypeNote">نسخة أولية — الأسبوع الأول</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

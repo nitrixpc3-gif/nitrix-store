@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="سلة مشتريات NITRIX وإتمام الطلب عبر واتساب مع توصيل إلى جميع محافظات العراق" />
+  <title>NITRIX | Cart & Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">التوصيل داخل كربلاء 3,000 د.ع — باقي المحافظات 5,000 د.ع — الاستلام من المحل مجاناً</div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Nitrix home"><img src="assets/nitrix-logo-full.png" alt="NITRIX PC Store" /></a>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a>
+        <a href="graphics-cards.html" data-i18n="navComponents">القطع</a>
+        <a href="index.html#products" data-i18n="navProducts">المنتجات</a>
+        <a class="active" href="cart.html" data-i18n="navCart">السلة</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="checkout-hero">
+      <div class="container">
+        <span class="eyebrow" data-i18n="eyebrow">إتمام الطلب</span>
+        <h1 data-i18n="title">سلة مشترياتك</h1>
+        <p data-i18n="intro">راجع المنتجات، اختَر التوصيل أو الاستلام من المحل، ثم أرسل الطلب إلى واتساب.</p>
+      </div>
+    </section>
+
+    <section class="section-pad compact">
+      <div class="container checkout-layout">
+        <div class="checkout-main">
+          <section class="checkout-card">
+            <div class="checkout-card-head">
+              <div><span class="step-number">1</span><h2 data-i18n="cartTitle">المنتجات</h2></div>
+              <a href="graphics-cards.html" class="continue-link" data-i18n="continueShopping">متابعة التسوق</a>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+          </section>
+
+          <section class="checkout-card">
+            <div class="checkout-card-head"><div><span class="step-number">2</span><h2 data-i18n="deliveryTitle">طريقة الاستلام</h2></div></div>
+            <div class="delivery-options">
+              <label class="delivery-option active" id="deliveryOption">
+                <input type="radio" name="fulfillment" value="delivery" checked>
+                <span class="delivery-icon">⌁</span>
+                <span><strong data-i18n="deliveryMethod">توصيل إلى العنوان</strong><small data-i18n="deliveryMethodText">3,000 د.ع داخل كربلاء و5,000 د.ع لبقية المحافظات</small></span>
+              </label>
+              <label class="delivery-option" id="pickupOption">
+                <input type="radio" name="fulfillment" value="pickup">
+                <span class="delivery-icon">⌂</span>
+                <span><strong data-i18n="pickupMethod">استلام من المحل</strong><small data-i18n="pickupMethodText">الاستلام من NITRIX في كربلاء مجاناً</small></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="checkout-card">
+            <div class="checkout-card-head"><div><span class="step-number">3</span><h2 data-i18n="customerTitle">معلومات الزبون</h2></div></div>
+            <form id="checkoutForm" class="checkout-form" novalidate>
+              <label><span data-i18n="nameLabel">الاسم الكامل</span><input id="customerName" type="text" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="اكتب اسمك الكامل"></label>
+              <label><span data-i18n="phoneLabel">رقم الهاتف</span><input id="customerPhone" type="tel" inputmode="tel" autocomplete="tel" required data-i18n-placeholder="phonePlaceholder" placeholder="07XX XXX XXXX"></label>
+              <label id="provinceField"><span data-i18n="provinceLabel">المحافظة</span><select id="provinceSelect" required></select></label>
+              <label id="addressField"><span data-i18n="addressLabel">العنوان بالتفصيل</span><input id="customerAddress" type="text" autocomplete="street-address" required data-i18n-placeholder="addressPlaceholder" placeholder="المنطقة، الشارع، أقرب نقطة دالة"></label>
+              <label class="full-width"><span data-i18n="notesLabel">ملاحظات إضافية (اختياري)</span><textarea id="customerNotes" rows="3" data-i18n-placeholder="notesPlaceholder" placeholder="أي ملاحظة تخص الطلب أو وقت التواصل"></textarea></label>
+              <div class="payment-note full-width"><span>💵</span><div><strong data-i18n="paymentTitle">الدفع عند الاستلام</strong><p data-i18n="paymentText">يتم تأكيد الطلب وتفاصيل التوصيل عبر واتساب.</p></div></div>
+            </form>
+          </section>
+        </div>
+
+        <aside class="order-summary checkout-card">
+          <h2 data-i18n="summaryTitle">ملخص الطلب</h2>
+          <div class="summary-row"><span data-i18n="subtotal">مجموع المنتجات</span><strong id="subtotalValue">0 د.ع</strong></div>
+          <div class="summary-row"><span data-i18n="shipping">أجرة التوصيل</span><strong id="shippingValue">0 د.ع</strong></div>
+          <div class="summary-divider"></div>
+          <div class="summary-row summary-total"><span data-i18n="total">المجموع الكلي</span><strong id="totalValue">0 د.ع</strong></div>
+          <p class="summary-hint" id="shippingHint"></p>
+          <button class="btn btn-primary checkout-submit" id="submitOrder" type="button" data-i18n="submitOrder">تأكيد وإرسال الطلب عبر واتساب</button>
+          <div class="secure-note"><span>✓</span><span data-i18n="secureNote">لا يتم الدفع داخل الموقع حالياً؛ يتم التأكيد مباشرةً مع NITRIX.</span></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/nitrix-logo-full.png" alt="NITRIX"><p data-i18n="footerText">متجر NITRIX في كربلاء، مع توصيل إلى جميع محافظات العراق.</p></div>
+      <div><h3 data-i18n="footerShop">المتجر</h3><a href="graphics-cards.html" data-i18n="graphics">كروت الشاشة</a><a href="index.html#products" data-i18n="products">المنتجات</a></div>
+      <div><h3 data-i18n="footerSupport">الدعم</h3><a href="pc-builder.html">PC Builder</a><a href="https://wa.me/9647766009666" target="_blank" data-i18n="contact">اتصل بنا</a></div>
+      <div><h3 data-i18n="footerContact">التواصل</h3><p data-i18n="location">كربلاء، العراق</p><a href="tel:+9647766009666">0776 600 9666</a><a href="mailto:nitrixpc3@gmail.com">nitrixpc3@gmail.com</a><a href="https://wa.me/9647766009666" target="_blank">WhatsApp</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NITRIX PC Store</span><span data-i18n="deliveryFooter">توصيل إلى جميع محافظات العراق</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

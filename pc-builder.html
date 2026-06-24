@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="NITRIX PC Builder — اختر قطع جهازك واحصل على فحص توافق وسعر إجمالي" />
+  <title>NITRIX | PC Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">توصيل إلى جميع محافظات العراق — اطلب مباشرة عبر واتساب</div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Nitrix home"><img src="assets/nitrix-logo-full.png" alt="NITRIX PC Store"></a>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a class="active" href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a>
+        <a href="graphics-cards.html" data-i18n="navComponents">القطع</a>
+        <a href="index.html#products" data-i18n="navProducts">المنتجات</a>
+        <a href="index.html#deals" data-i18n="navDeals">العروض</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pcbuilder-page">
+    <section class="pcbuilder-hero">
+      <div class="container pcbuilder-hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="eyebrow">NITRIX PC BUILDER</span>
+          <h1 data-i18n="title">ابنِ جهازك خطوة بخطوة</h1>
+          <p data-i18n="intro">اختَر المنصة والقطع، وشاهد السعر والتوافق واستهلاك الطاقة مباشرةً قبل إرسال التجميعة إلى واتساب.</p>
+        </div>
+        <div class="pcbuilder-source-note">
+          <span>↻</span>
+          <div><strong data-i18n="priceNoteTitle">أسعار مرجعية محدثة</strong><small data-i18n="priceNote">هذه نسخة تجريبية بأسعار السوق المنشورة، ويُعاد تأكيد السعر والمخزون عند الطلب.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad compact">
+      <div class="container pcbuilder-shell">
+        <aside class="pcbuilder-sidebar">
+          <div class="platform-panel">
+            <span class="panel-label" data-i18n="choosePlatform">اختر المنصة</span>
+            <div class="platform-toggle">
+              <button class="platform-btn active" data-platform="intel">INTEL</button>
+              <button class="platform-btn" data-platform="amd">AMD</button>
+            </div>
+          </div>
+          <div class="step-list" id="stepList"></div>
+          <button class="builder-reset" id="resetBuild" type="button" data-i18n="reset">إعادة ضبط التجميعة</button>
+        </aside>
+
+        <div class="pcbuilder-main">
+          <div class="pcbuilder-main-head">
+            <div><span class="panel-label" id="currentStepKicker">1 / 8</span><h2 id="currentStepTitle">المعالج</h2><p id="currentStepHelp">اختر المعالج الذي يناسب استخدامك.</p></div>
+            <div class="step-nav"><button id="prevStep" type="button">→</button><button id="nextStep" type="button">←</button></div>
+          </div>
+          <div class="builder-products-grid" id="builderProducts"></div>
+        </div>
+
+        <aside class="build-summary">
+          <div class="summary-head"><span class="panel-label" data-i18n="summary">ملخص التجميعة</span><span class="compatibility-badge pending" id="compatibilityBadge">غير مكتملة</span></div>
+          <div class="selected-parts" id="selectedParts"></div>
+          <div class="power-box">
+            <div><span data-i18n="estimatedPower">الاستهلاك التقديري</span><strong id="estimatedPower">—</strong></div>
+            <div><span data-i18n="recommendedPsu">الباور المقترح</span><strong id="recommendedPsu">—</strong></div>
+          </div>
+          <div class="compatibility-list" id="compatibilityList"></div>
+          <div class="build-total"><span data-i18n="total">السعر الكلي</span><strong id="buildTotal">0 د.ع</strong></div>
+          <div class="summary-actions">
+            <button class="btn btn-primary" id="sendBuild" type="button" data-i18n="sendWhatsapp">إرسال إلى واتساب</button>
+            <button class="btn btn-outline" id="copyBuild" type="button" data-i18n="copyBuild">نسخ المواصفات</button>
+            <button class="save-build" id="saveBuild" type="button" data-i18n="saveBuild">حفظ التجميعة على الجهاز</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/nitrix-logo-full.png" alt="NITRIX"><p data-i18n="footerText">متجر NITRIX في كربلاء، مع توصيل إلى جميع محافظات العراق.</p></div>
+      <div><h3 data-i18n="footerShop">المتجر</h3><a href="graphics-cards.html" data-i18n="graphics">كروت الشاشة</a><a href="index.html#products" data-i18n="navProducts">المنتجات</a></div>
+      <div><h3 data-i18n="footerSupport">الدعم</h3><a href="pc-builder.html">PC Builder</a><a href="https://wa.me/9647766009666" target="_blank" data-i18n="contact">اتصل بنا</a></div>
+      <div><h3 data-i18n="footerContact">التواصل</h3><p data-i18n="location">كربلاء، العراق</p><a href="tel:+9647766009666">0776 600 9666</a><a href="mailto:nitrixpc3@gmail.com">nitrixpc3@gmail.com</a><p data-i18n="delivery">توصيل إلى جميع محافظات العراق</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NITRIX PC Store</span><span data-i18n="prototype">PC Builder V1</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="builder-products.js"></script>
+  <script src="pc-builder.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="تفاصيل منتج من NITRIX PC Store في كربلاء" />
+  <title>NITRIX | Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement" data-i18n="announcement">توصيل إلى جميع محافظات العراق — اطلب مباشرة عبر واتساب</div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html"><img src="assets/nitrix-logo-full.png" alt="NITRIX PC Store"></a>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+      <nav class="main-nav">
+        <a href="index.html" data-i18n="navHome">الرئيسية</a>
+        <a href="pc-builder.html" data-i18n="navBuilder">تجميعتك</a>
+        <a class="active" href="graphics-cards.html" data-i18n="navComponents">القطع</a>
+        <a href="index.html#deals" data-i18n="navDeals">العروض</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <a class="cart-btn" href="cart.html" aria-label="السلة">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-page-section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="home">الرئيسية</a><span>›</span><a href="graphics-cards.html" data-i18n="graphics">كروت الشاشة</a><span>›</span><span id="crumbProduct">NITRIX</span></nav>
+        <div class="product-detail" id="productDetail"></div>
+      </div>
+    </section>
+
+    <section class="section-pad compact specs-section">
+      <div class="container detail-lower-grid">
+        <div class="specs-card">
+          <span class="eyebrow" data-i18n="specsEyebrow">المواصفات</span>
+          <h2 data-i18n="specsTitle">المواصفات الأساسية</h2>
+          <div class="specs-table" id="specsTable"></div>
+        </div>
+        <aside class="service-card">
+          <div class="service-item"><span>✓</span><div><strong data-i18n="warrantyTitle">ضمان 3 سنوات</strong><p data-i18n="warrantyText">حسب شروط الضمان والاستبدال المعتمدة.</p></div></div>
+          <div class="service-item"><span>⌁</span><div><strong data-i18n="deliveryTitle">توصيل إلى كل العراق</strong><p data-i18n="deliveryText">من كربلاء إلى جميع المحافظات.</p></div></div>
+          <div class="service-item"><span>⚙</span><div><strong data-i18n="supportTitle">مساعدة قبل الشراء</strong><p data-i18n="supportText">نتأكد أن القطعة مناسبة لجهازك.</p></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad compact related-section">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow" data-i18n="relatedEyebrow">خيارات أخرى</span><h2 data-i18n="relatedTitle">منتجات مشابهة</h2></div></div>
+        <div class="product-grid" id="relatedGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/nitrix-logo-full.png" alt="NITRIX"><p data-i18n="footerText">متجر NITRIX في كربلاء، مع توصيل إلى جميع محافظات العراق.</p></div>
+      <div><h3 data-i18n="footerShop">المتجر</h3><a href="graphics-cards.html" data-i18n="graphics">كروت الشاشة</a><a href="index.html#products" data-i18n="products">المنتجات</a></div>
+      <div><h3 data-i18n="footerSupport">الدعم</h3><a href="pc-builder.html">PC Builder</a><a href="https://wa.me/9647766009666" target="_blank" data-i18n="contact">اتصل بنا</a></div>
+      <div><h3 data-i18n="footerContact">التواصل</h3><p data-i18n="location">كربلاء، العراق</p><a href="tel:+9647766009666">0776 600 9666</a><a href="mailto:nitrixpc3@gmail.com">nitrixpc3@gmail.com</a><a href="https://wa.me/9647766009666" target="_blank">WhatsApp</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NITRIX PC Store</span><span data-i18n="deliveryFooter">توصيل إلى جميع محافظات العراق</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="products.js"></script>
+  <script src="product-page.js"></script>
+</body>
+</html>
